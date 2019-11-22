@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+sourceCompatibility = '1.12'
+targetCompatibility = '1.12'
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src']
+        }
+    }
+}
+
+task run(type:JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+    main = 'Main'
+}
